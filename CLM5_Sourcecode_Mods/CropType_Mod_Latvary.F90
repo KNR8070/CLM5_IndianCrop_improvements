@@ -294,9 +294,9 @@ contains
           this%latbaset_patch(p) = pftcon%baset(ivt)
        else 
            if ((ivt == nswheat) .or. (ivt == nirrig_swheat)) then !!KNR_14Nov2023!!
-              this%latbaset_patch(p) = latbaset(pftcon%baset(ivt), grc%latdeg(g), 4._r8, 0.13_r8)
+              this%latbaset_patch(p) = latbaset(pftcon%baset(ivt), grc%latdeg(g), 6._r8, 0.19_r8)
            else if ((ivt == nrice) .or. (ivt == nirrig_rice)) then !!KNR_14Nov2023!! 
-              this%latbaset_patch(p) = latbaset(pftcon%baset(ivt), grc%latdeg(g), 6._r8, 0.2_r8)
+              this%latbaset_patch(p) = latbaset(pftcon%baset(ivt), grc%latdeg(g), 6.8_r8, 0.26_r8)
            else
               this%latbaset_patch(p) = latbaset(pftcon%baset(ivt), grc%latdeg(g), this%baset_latvary_intercept, this%baset_latvary_slope)
            end if
